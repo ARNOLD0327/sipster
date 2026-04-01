@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    
+}
+.home-page{
+ 
+  
+  display: flex;
+  background-color: #111111;
+  
+  position: relative;   
+  min-height: 100vh;
+  overflow: hidden;
+}
+.hero-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+
+}
+.hero-image{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.hero-image img{
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    
+    width: 700px;
+    height: 800px;
+}
+h1{
+    font-size: 80px;
+    font-weight: bolder;
+    color: #ffcc00;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    opacity: 0.7;
+}
+h2{
+    font-size: 50px;
+    font-weight: bolder;
+    color:rgb(255, 255, 255);
+    font-family: 'Arial Black', Gadget, sans-serif;
+    opacity: 0.8;
+}
+h3{
+    font-size: 30px;
+    font-weight: bolder;
+    color: #ffcc00;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    opacity: 0.8;
+}
+.hero-text{
+    margin-left: 40px;
+    margin-top: 60px;
+}
+.hero-text p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+hr {
+  border: none;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(to right, #6f4e37, #c59d5f, #6f4e37);
+  background-color: black;
+}
+.hero-text button {
+  background-color: #ffcc00;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-top: 20px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.steam {
+  position: absolute;
+  top: 80px;      /* move steam above cup */
+  left: 280px;      /* adjust to cup center */
+  width: 220px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 10;
+}
+.steam span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 150px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+  filter: blur(12px);
+  animation: steam 4s infinite ease-in-out;
+}
+.steam span:nth-child(1) {
+  left: 20px;
+  animation-delay: 0s;
+}
+.steam span:nth-child(2) {
+  left: 50px;
+  animation-delay: 1s;
+}
+.steam span:nth-child(3) {
+  left: 80px;
+  animation-delay: 2s;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-100px) scale(1.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-160px) scale(1.8);
+    opacity: 0;
+  }
+}
+ /* singnature section style */
+ .features{
+   background-color: #111111;
+
+  padding-bottom: 60px;
+ }
+ .feature{
+    text-align: center;
+    padding: 50px 20px;
+ }
+ .feature h4{
+    font-size: 24px;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 10px;
+ }
+ .feature p{
+    font-size: 20px;
+    color: rgb(255, 255, 255); 
+    margin-bottom: 20px;
+ }
+ .feature h2{
+    font-size: 40px;
+    color: #ffcc00; 
+    margin-bottom: 20px;
+ }
+.feature hr {
+  border: none;
+  height: 3px;
+  width: 20%;
+  background-color: black;
+  margin: 20px auto;   /* center horizontally */
+}
+
+  .signature-list{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  .signature-item{
+     background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease;
+    
+  }
+  .signature-item:hover{
+     transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(255, 204, 0, 0.2);
+  } 
+  .signature-item:hover img{
+      transform: scale(1.05);
+  }
+  .signature-item img{
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+  }
+ .signature-item h3{
+      font-size: 24px;
+      margin-bottom: 10px;
+  }
+  .signature-item p{
+      font-size: 16px;
+      color: #ccc;
+  }
+  .signature-item h4{
+      font-size: 18px;
+      color: #ffcc00;
+      margin-top: 10px;
+      opacity: 0.9;
+  }

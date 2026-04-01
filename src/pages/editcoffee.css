@@ -1,0 +1,73 @@
+/* Main container */
+.form-container {
+  width: 420px;
+  margin: 60px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-top: 6px solid #6F4E37;
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #3E2723;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Form layout */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs & textarea */
+.form-container input,
+.form-container textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d7ccc8;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  background-color: #fafafa;
+}
+
+/* Textarea */
+.form-container textarea {
+  height: 90px;
+  resize: none;
+}
+
+/* Focus effect */
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: #6F4E37;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(111, 78, 55, 0.3);
+}
+
+/* Update button */
+.form-container button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(to right, #6F4E37, #3E2723);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover effect */
+.form-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}

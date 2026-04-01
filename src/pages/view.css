@@ -1,0 +1,104 @@
+/* Container */
+.store-container {
+  padding: 40px 60px;
+  background-color: #111; /* dark background */
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+/* Heading */
+.store-container h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #ffcc00;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.coffee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.coffee-card {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 204, 0, 0.2);
+}
+
+.coffee-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+}
+
+/* Image */
+.coffee-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Title */
+.coffee-card h3 {
+  margin: 15px 0 10px;
+  color: #ffcc00;
+}
+
+/* Description */
+.coffee-card p {
+  font-size: 14px;
+  color: #ccc;
+  min-height: 50px;
+}
+
+/* Price */
+.coffee-card h4 {
+  margin: 10px 0;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Button Group */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Buttons */
+.btn-group button {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  margin: 0 5px;
+}
+
+/* Edit Button */
+.btn-group button:first-child {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.btn-group button:first-child:hover {
+  background-color: #e6b800;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #cc0000;
+}

@@ -1,0 +1,93 @@
+.order-page{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+.order-item{
+    display: flex;
+    flex-direction: column;
+    background: #1c1c1c;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    width: 300px;
+    align-items: center;
+}
+.order-item img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.order-item h3{
+    margin: 10px 0;
+    color: #fff;
+    opacity: 0.8;
+}
+.order-item p{
+    color: #ccc;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.8;
+}
+.order-item button{
+
+    background: #ffcc00;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+span{
+    color: #fff;
+    font-size: 16px;
+    margin: 0 10px;
+    opacity: 0.8;
+}
+.view-menu-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+  
+
+.view-menu-button button {
+  font-family: "Open Sans", sans-serif;
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.view-menu-button button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .view-menu-button button {
+    padding: 0.25em 0.75em;
+  }
+}
