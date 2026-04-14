@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     const fetchSignature = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/coffees/store");
+        const res = await fetch("https://sipster-server-1.onrender.com/api/coffees/store");
         const data = await res.json();
         setSignature(data);
       } catch (err) {

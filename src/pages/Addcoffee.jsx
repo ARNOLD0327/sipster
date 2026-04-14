@@ -28,7 +28,7 @@ function AddCoffee() {
         ingredients: coffee.ingredients.split(","), // convert string to array
       };
 
-      await axios.post("http://localhost:3000/store", formattedData);
+      await axios.post("https://sipster-server-1.onrender.com/store", formattedData);
       alert("Coffee added successfully!");
     } catch (error) {
       console.log("Error:", error);

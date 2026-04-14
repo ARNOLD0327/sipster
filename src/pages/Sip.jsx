@@ -12,7 +12,7 @@ function Sip() {
   useEffect(() => {
     const fetchCoffee = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/coffees/store");
+        const res = await axios.get("https://sipster-server-1.onrender.com/api/coffees/store");
         setSips(res.data);
       } catch (err) {
         console.error(err);

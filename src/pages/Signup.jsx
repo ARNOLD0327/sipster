@@ -26,7 +26,7 @@ function Signup() {
     }
     try{
       const res = await axios.post(
-      "http://localhost:3000/api/users/signup",
+      "https://sipster-server-1.onrender.com/api/users/signup",
       formData
     );
     alert("Signup successful! Please login.");

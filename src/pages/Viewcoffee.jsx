@@ -8,7 +8,7 @@ function Viewcoffee() {
   const navigate = useNavigate();
 
   const fetchCoffees = async () => {
-    const res = await axios.get("http://localhost:3000/store");
+    const res = await axios.get("https://sipster-server-1.onrender.com/store");
     setCoffees(res.data);
   };
 
@@ -18,7 +18,7 @@ function Viewcoffee() {
   }, []);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:3000/store/${id}`);
+    await axios.delete(`https://sipster-server-1.onrender.com/store/${id}`);
     fetchCoffees(); // refresh list
   };
 

@@ -17,7 +17,7 @@ function EditCoffee() {
   });
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/store/${id}`)
+    axios.get(`https://sipster-server-1.onrender.com/store/${id}`)
       .then(res => {
         setCoffee({
           ...res.data,
@@ -41,7 +41,7 @@ function EditCoffee() {
       ingredients: coffee.ingredients.split(","),
     };
 
-    await axios.put(`http://localhost:3000/store/${id}`, updatedData);
+    await axios.put(`https://sipster-server-1.onrender.com/store/${id}`, updatedData);
     navigate("/store");
   };
 
