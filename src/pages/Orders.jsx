@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { useContext } from "react";
 import { CartContext } from "../context/Cartcontext";
-import "./Orders.css";
+import "./orders.css";
 import Gif from "../assets/gif.gif";
 import { useNavigate } from "react-router-dom";
 function Orders() {
