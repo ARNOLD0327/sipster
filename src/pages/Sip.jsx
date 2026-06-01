@@ -69,7 +69,7 @@ function Sip() {
                   +
                 </button>
               </div>
-              <p>Qty:</p>
+              
             </motion.div>
           ))}
         </div>
