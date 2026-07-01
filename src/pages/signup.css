@@ -3,71 +3,177 @@
   font-family: "Segoe UI", sans-serif;
 }
 
+/* ---------- Animated background ---------- */
 .signup-container {
   height: 100vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(170deg,#fff , #333);
-
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
 }
 
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* floating glow orbs drifting behind the card */
+.signup-container::before,
+.signup-container::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.signup-container::before {
+  width: 380px;
+  height: 380px;
+  background: #667eea;
+  top: -80px;
+  left: -80px;
+  animation: float1 10s ease-in-out infinite;
+}
+
+.signup-container::after {
+  width: 420px;
+  height: 420px;
+  background: #f093fb;
+  bottom: -100px;
+  right: -100px;
+  animation: float2 12s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(60px, 40px) scale(1.15); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(-50px, -30px) scale(1.1); }
+}
+
+/* ---------- Glass card ---------- */
 .signup-form {
-  background: #fff;
-  padding: 30px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 36px 30px;
   width: 350px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(252, 175, 175, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  animation: riseIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .signup-form .title {
   text-align: center;
-  margin-bottom: 20px;
- text-transform: uppercase;
- font-size: 30px;
- font-weight: bold;
- font-style: italic;
-  color: #333;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
 
+/* ---------- Inputs ---------- */
 .signup-form input {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 8px;
-  border: 1px solid #ccc;
+  color: #fff;
   outline: none;
   font-size: 14px;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.signup-form input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.signup-form input:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .signup-form input:focus {
-  border-color: #667eea;
+  border-color: #a78bfa;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.25);
 }
 
+/* ---------- Button ---------- */
 .signup-form button {
   width: 100%;
   padding: 12px;
-  background: #667eea;
+  margin-top: 4px;
+  background: linear-gradient(135deg, #667eea, #a855f7);
+  background-size: 200% 200%;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-position 0.4s ease;
 }
 
 .signup-form button:hover {
-  background: #5a67d8;
+  background-position: 100% 0;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.45);
+  transform: translateY(-2px);
 }
 
+.signup-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.35);
+}
+
+/* ---------- Footer text ---------- */
 .login-text {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .login-text span {
-  color: #667eea;
+  color: #c4b5fd;
   cursor: pointer;
   font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.login-text span:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ---------- Accessibility ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .signup-container,
+  .signup-container::before,
+  .signup-container::after,
+  .signup-form {
+    animation: none;
+  }
 }
